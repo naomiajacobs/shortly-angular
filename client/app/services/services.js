@@ -5,7 +5,10 @@ angular.module('shortly.services', [])
 
   // get all links
   var getLinks = function () {
-
+    return $http({
+      method: 'GET',
+      url: '/api/links'
+    });
   };
 
   // post a link
