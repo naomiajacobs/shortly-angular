@@ -14,8 +14,16 @@ angular.module('shortly', [
     .when('/signup', {
       templateUrl: 'app/auth/signup.html',
       controller: 'AuthController'
+    })
+    .when('/links', {
+      templateUrl: 'app/links/links.html',
+      controller: 'LinksController'
+    })
+    .when('/shorten', {
+      templateUrl: 'app/shorten/shorten.html',
+      controller: 'ShortenController'
     });
-    // Your code here
+
 
     // We add our $httpInterceptor into the array
     // of interceptors. Think of it like middleware for your ajax calls
@@ -23,7 +31,7 @@ angular.module('shortly', [
 })
 .factory('AttachTokens', function ($window) {
   // this is an $httpInterceptor
-  // its job is to stop all out going request
+  // its job is to stop all out going requests
   // then look in local storage and find the user's token
   // then add it to the header so the server can validate the request
   var attach = {
