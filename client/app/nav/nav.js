@@ -1,12 +1,9 @@
 angular.module("shortly.nav", [])
-  .controller("NavController", function ($rootScope, $location, $scope, Auth) {
+  .controller("NavController", function ($scope, Auth, $state) {
 
-    $scope.links = function () {
-      $location.path('/links');
-    };
-
-    $scope.shorten = function () {
-      $location.path('/shorten');
+    $scope.signOut = function () {
+      Auth.signOut();
+      $state.go('signin');
     };
 
   });
