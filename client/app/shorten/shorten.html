@@ -1,7 +1,11 @@
 <div id='container'>
-  <input type='url' ng-model='link.url'>
-  <img ng-show='pending' src="/assets/spiffygif_46x46.gif"/>
-  <button ng-disabled='pending' ng-click='addLink()'>Shorten</button>
+  <form name="urlForm">
+    URL: <input name="name" type='url' ng-model='link.url' required>
+    <span class="error" ng-show="urlForm.name.$error.required">Url is required</span>
+    <span class="error" ng-show="urlForm.name.$error.url">Valid url is required</span>
+    <img ng-show='pending' src="/assets/spiffygif_46x46.gif"/>
+    <button ng-disabled='pending' ng-click='addLink()'>Shorten</button>
+  </form>
 </div>
 
 
