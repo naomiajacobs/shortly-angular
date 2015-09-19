@@ -26,8 +26,6 @@ angular.module('shortly', [
         }
       },
       url: '/links'
-      // templateUrl: 'app/links/links.html',
-      // controller: 'LinksController'
     })
     .state('shorten', {
       views: {
@@ -41,8 +39,6 @@ angular.module('shortly', [
         }
       },
       url: '/shorten'
-      // templateUrl: 'app/shorten/shorten.html',
-      // controller: 'ShortenController'
     })
     .state('signin', {
       views: {
@@ -62,28 +58,6 @@ angular.module('shortly', [
       },
       url: '/signup'
     });
-  // routeProvider must be refactored to $stateProvider
-  // $routeProvider
-  //   .when('/signin', {
-  //     templateUrl: 'app/auth/signin.html',
-  //     controller: 'AuthController'
-  //   })
-  //   .when('/signup', {
-  //     templateUrl: 'app/auth/signup.html',
-  //     controller: 'AuthController'
-  //   })
-  //   .when('/links', {
-  //     templateUrl: 'app/links/links.html',
-  //     controller: 'LinksController'
-  //   })
-  //   .when('/shorten', {
-  //     templateUrl: 'app/shorten/shorten.html',
-  //     controller: 'ShortenController'
-  //   })
-  //   .when('/', {
-  //     redirectTo: '/links'
-  //   });
-
 
     // We add our $httpInterceptor into the array
     // of interceptors. Think of it like middleware for your ajax calls
